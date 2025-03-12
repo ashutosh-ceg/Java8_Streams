@@ -1,6 +1,7 @@
 import java.util.*;
 import java.util.stream.Stream;
 import java.util.stream.Collectors;
+import java.util.Optional;
 
 public class StreamOp2 {
     public static void main(String[] args) {
@@ -53,6 +54,15 @@ public class StreamOp2 {
       List<Integer> list4= Arrays.asList(1,2,3,4,5);
       int sum=list4.stream().reduce(0, Integer::sum);
       System.out.println("Reduce List Or sum of list "+sum);
+      
+      // Finding first element 
+     
+      List<Integer> list5=Arrays.asList(1,2,3,3,4,5,6);
+      Optional<Integer> first =list5.stream().filter(num->num%2==0).findFirst();
+      System.out.println("First even number in list "+first);
+      
+      
+      
       
       
   }
